@@ -44,7 +44,7 @@ where ctid in
 			where row_num>1
 )
 
---Treating null values datatypes --
+--Treating null values, date formats,updating columns--
 
 select * from sales where transaction_id isnull;
 
@@ -145,7 +145,7 @@ Update sales
 set customer_address = 'Not Available'
 where customer_address isnull;
 
--- Date format is left --
+-- Checking Datatypes --
 SELECT COLUMN_NAME, DATA_TYPE
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME='sales'
